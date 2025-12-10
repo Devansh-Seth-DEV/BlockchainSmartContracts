@@ -30,7 +30,7 @@ contract ExampleStrings {
         @note
         Try using `bytes` and avoid using `strings` as it can store exact raw data
         and computations can be easily done on `bytes`
-        For data "Hello World" it'll be stored as "0x48656c6c6f20576f726c64"
+        For data "Hello World" it'll be stored as "0x48656c6c6f20576f726c64" (raw data)
     */
     bytes public myBytes = "Hello World";
 
@@ -78,7 +78,7 @@ contract ExampleStrings {
         Remix shows “Infinite Gas” when the gas usage depends on how big the input data is!
 
         @note
-        You can see that we're wrote `view` here, it means that this function can access
+        You can see that we've wrote `view` here, it means that this function can access
         the contract's variables and can performs operations on them
     */
     function compare(string memory other) public view returns (bool) {
@@ -102,7 +102,7 @@ contract ExampleStrings {
         @return Returns the length of `myBytes` in `uint256` type
 
         @note
-        You can see that we're wrote `view` here, it means that this function can access
+        You can see that we've wrote `view` here, it means that this function can access
         the contract's variables and can performs operations on them
     */
     function getBytesLength() public view returns (uint256) {
