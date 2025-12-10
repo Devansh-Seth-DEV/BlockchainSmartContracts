@@ -20,7 +20,7 @@ contract ExampleBoolean {
 
         @note
         This setter function will going to cost some `gas` because the funciton
-        is going to perform the write operation on the storage variable `myUint`
+        is going to perform the write operation on the storage variable `myBool`
         the current estimated cost value from Remix-IDE for this function
         is `24679` gas
     */
