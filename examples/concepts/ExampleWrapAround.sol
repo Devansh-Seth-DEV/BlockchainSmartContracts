@@ -35,47 +35,6 @@ contract ExampleWrapAround {
     */
     function setMyUint8(uint8 newUint8) public { myUint8 = newUint8; }
     
-    /*
-        @brief Function to increment the value of storage variable by 1
-
-        @description
-        This function will be going to increment the storage variable `myUint256`
-        by 1
-
-        @note
-        Try incrementing the value after `myUint256` reaches `(2^256)-1`!
-        You can see that you'll get an error because in newer version
-        of `Solidity` the smart contract will not automatically `wrap-around` the
-        value back to `0`
-
-        @note
-        This function will going to cost some `gas` because the funciton
-        is going to perform the write operation on the storage variable `myUint256`
-        the current estimated cost value from Remix-IDE for this function
-        is `24502` gas
-    */
-    function incrementMyUint256() public { myUint256++; }
-
-    /*
-        @brief Function to increment the value of storage variable by 1
-
-        @description
-        This function will be going to increment the storage variable `myUint8`
-        by 1
-
-        @note
-        Try incrementing the value after `myUint8` reaches `255`!
-        You can see that you'll get an error because in newer version
-        of `Solidity` the smart contract will not automatically `wrap-around` the
-        value back to `0`
-
-        @note
-        This function will going to cost some `gas` because the funciton
-        is going to perform the write operation on the storage variable `myUint8`
-        the current estimated cost value from Remix-IDE for this function
-        is `26722` gas
-    */
-    function incrementMyUint8() public { myUint8++; }
 
     /*
         @brief Wrap-Around function to decrement the value of storage variable by 1
@@ -119,7 +78,7 @@ contract ExampleWrapAround {
         Try decrement the value `myUint8` when it is `0`!
         You can see that you'll get an error because in newer version
         of `Solidity` the smart contract will not automatically `wrap-around` the
-        value back to `255`
+        value back to `255` as the operation is `checked`
 
         @note
         This function will going to cost some `gas` because the funciton
